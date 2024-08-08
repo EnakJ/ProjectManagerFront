@@ -1,1 +1,75 @@
-<p>home works!</p>
+<div class="content container-fluid row overflow-hidden">
+  <div class="col-lg-8 col-md-6 row text-center mx-0 p-0 overflow-y-hidden">
+      <div class="col-lg-3 col-md-10 col-sm-12 my-3 p-2 mx-lg-2 mx-md-3 text-center bg-light shadow rounded-4 boxe"
+           *ngIf="projects | async as listProject;">
+        <span class="mx-3 my-1">{{listProject.length}}</span>
+        <i class="bi bi-archive-fill my-1 mx-2"></i>
+        <span class="fs-4">Projects</span>
+      </div>
+      <div class="col-lg-3 col-md-10 col-sm-12 my-3 p-2 mx-lg-2 mx-md-3 text-center bg-light shadow rounded-4 boxe"
+      *ngIf="activities | async as listActitvity">
+        <span class="mx-3 my-1">{{listActitvity.length}}</span>
+        <i class="bi bi-activity my-1 mx-2"></i>
+        <span class="fs-4">Activities</span>
+      </div>
+      <div class="col-lg-3 col-md-10 col-sm-12 my-3 p-2 mx-lg-2 mx-md-3 text-center bg-light shadow rounded-4 boxe"
+      *ngIf="tasks | async as listTasks">
+        <span class="mx-3 my-1">{{listTasks.length}}</span>
+        <i class="bi bi-list-task my-1 mx-lg-2 mx-md-3"></i>
+        <span class="fs-4">Tasks</span>
+      </div>
+  </div>
+  <div class="row col-lg-4 col-md-6 text-center my-3 shadow rounded-4 left-boxe">
+    <p>hello</p>
+  </div>
+  <div class="col-12 row my-3 bg-light shadow rounded-3 tabled overflow-y-hidden">
+    <div class="col-md-12 row">
+      <div class="input-group-text col-10">
+        <input class="form-control input" type="search" placeholder="search task...">
+      </div>
+      <div class="col-2 mx-0 px-0">
+        <div class="dropdown dropdown-center d-inline my-0">
+          <button class="dropdown-toggle dropdown-bouton" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-filter"></i>
+            <span>short</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="">Action</a></li>
+            <li><a class="dropdown-item" routerLink="">Another action</a></li>
+            <li><a class="dropdown-item" routerLink="">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
+      <h4 class="border border-1 w-100 bg-body-secondary"></h4>
+      <div class="col-12 overflow-y-scroll pb-3" *ngIf="tasksDetail | async; else NoTasks">
+        <!-- table class="table table-responsive" *ngIf="tasksDetail.taskList">
+          <tr *ngFor="let task of tasksDetail.taskList">
+            <td>
+              <i class="bi-three-dots-vertical"></i>
+              <input type="checkbox" class="bg-light text-body-tertiary">
+            </td>
+            <td>
+              <span class="fs-6 text-body-tertiary">{{task.taskName}}</span>
+            </td>
+            <td>
+              <span class="rounded-3 fs-6"
+                    [class]="task.taskStatut.toLowerCase()">
+                {{task.taskStatut.toLowerCase()}}
+              </span>
+            </td>
+            <td>
+              <span class="rounded-3 fs-6 text-body-tertiary">
+                {{task.taskState.toLowerCase()}}
+              </span>
+            </td>
+          </tr>
+        </table-->
+      </div>
+      <ng-template #NoTasks>
+        <div class="container text-center">
+          <span class="text-warning-emphasis fw-bold fs-3">loading...</span>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

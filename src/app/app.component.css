@@ -1,0 +1,13 @@
+*{
+  background-color: greenyellow;
+}
+.main{
+  position: relative;
+  width: calc(100% - 15rem);
+  height: calc(100% - 15vh);
+  margin-top: 8vh;
+  margin-left: 15rem;
+  background-color: red;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}

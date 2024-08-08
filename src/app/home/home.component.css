@@ -1,0 +1,102 @@
+.boxe{
+  height: 10rem;
+  color: var(--blue);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2.5rem;
+}
+
+.left-boxe{
+  background-color: var(--blue);
+  color:var(--white);
+  -ms-high-contrast-adjust: unset;
+}
+
+.tabled{
+  height: 70vh;
+  overflow-y: scroll;
+  padding: 2rem 1rem;
+}
+
+.important{
+  background-color: #e9b10a;
+  color: white;
+  font-size: 12px;
+  padding: 2px 5px;
+}
+
+.urgent{
+  background-color:darkred;
+  color: white;
+  font-size: 12px;
+  padding: 2px 5px;
+}
+
+.prioritaire{
+  background-color: #1795ce;
+  color: white;
+  font-size: 12px;
+  padding: 2px 5px;
+}
+
+.important_urgent{
+  background-color: brown;
+  color: white;
+  font-size: 12px;
+  padding: 2px 5px;
+}
+
+.urgent_prioritaire{
+  background-color:#2a2185;
+  color: white;
+  font-size: 12px;
+  padding: 2px 5px;
+}
+
+.prioritaire_important{
+  background-color:blueviolet;
+  color: white;
+  font-size: 12px;
+  padding: 2px 5px;
+}
+
+.important_urgent_prioritaire{
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 5px;
+}
+
+
+
+.dropdown-bouton{
+  width: 100%;
+  line-height:normal;
+  border: none;
+  outline: none;
+  box-shadow: #999999 5rem 5rem;
+}
+
+.input{
+  border: 1px solid var(--blue);
+  outline: none;
+  box-shadow: none;
+  font-size: 1rem;
+}
+
+.content{
+  margin: 0;
+  width: 100%;
+  height: calc(100% - 13vh);
+  background-color: #e3e3e3;
+  font-family: "Ubuntu", sans-serif;
+  overflow-y: hidden;
+}
+
+@media (max-width: 1320px) {
+  .boxe{
+    height: 13rem;
+  }
+  .boxe i{
+    display: grid;
+  }
+}
